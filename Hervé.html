@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulaire de commande au serveur</title>
+</head>
+
+<body>
+  <h1>Formulaire de soumission de votre commande </h1>
+  <form action="">
+    Nom du client 
+    <input type="text" name="nomclient">
+    <br>
+    <br>
+    Adresse Email 
+    <input type="email" name="adresse courriel" placeholder="xxxxx@gmail.com">
+    <br>
+    <br>
+    Numéro téléphone <input type="number" name="tel" placeholder="0xxxxxxxxx">
+    <br>
+    <br>
+    Commune+Quartier 
+    <input type="adresse" name="destination">
+    <br>
+    <br>
+      <button type="submit" style="
+   background-color: greenyellow;
+   padding: 15px;
+   margin: 20px;
+   border-radius: 10px;
+   max-height: 7px;
+   max-width: 160px;"><b>Envoyé coupon</b></button>
+     <button type="reset" style="
+   background-color: greenyellow;
+   padding: 15px;
+   margin: 20px;
+   border-radius: 10px;
+   max-height: 7px;
+   max-width: 160px;"><b>Annuler coupon</b></button>
+  </form>
+<script>
+  // Récupérer le panier
+  let panier = JSON.parse(localStorage.getItem("panier")) || {};
+
+  // Créer un bloc visible dans le formulaire
+  let form = document.querySelector("form");
+  let panierDiv = document.createElement("div");
+  panierDiv.style.background = "ghostwhite";
+  panierDiv.style.padding = "15px";
+  panierDiv.style.margin = "20px 0";
+  panierDiv.style.borderRadius = "10px";
+  panierDiv.style.boxShadow = "0 4px 5px rgba(0,0,0,0.2)";
+
+  panierDiv.innerHTML = "<h3>Produits commandés :</h3>";
+  let ul = document.createElement("ul");
+
+  for (let produit in panier) {
+    let li = document.createElement("li");
+    li.textContent = produit + " : " + panier[produit]; // produit + quantité
+    li.style.fontWeight = "bold";
+    li.style.marginBottom = "5px";
+    ul.appendChild(li);
+  }
+
+  panierDiv.appendChild(ul);
+  form.insertBefore(panierDiv, form.firstChild); // insère au début du formulaire
+
+  // Lors de l'envoi, ajouter les produits + quantités au formulaire en champ texte visible
+  let textarea = document.createElement("textarea");
+  textarea.name = "produits";
+  textarea.style.display = "none"; // ce champ sert juste pour l'envoi, pas pour l'utilisateur
+  textarea.value = JSON.stringify(panier);
+  form.appendChild(textarea);
+</script>
+</body>
+
+</html>

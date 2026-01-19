@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site de commande produit agricole en ligne</title>
+</head>
+
+<body style="text-align: center;">
+  <h1 style="color: green;">Listes des produits à commander </h1>
+ <div style="
+ background-color: ghostwhite;
+ padding: 20px;
+ margin: 20px;
+ border-radius: 20px;
+ box-shadow: 0 9px 7px;">
+   <h2>Maïs</h2>
+   <img src="https://i.ibb.co/6RTsRWMy/images.webp" alt="images" border="0">
+   <button  onclick="mul()" style="
+   background-color: greenyellow;
+   padding: 15px;
+   margin: 20px;
+   border-radius: 10px;
+   max-height: 7px;
+   max-width: 160px;"><b>Commander</b></button>
+   <p id="S5">0</p>
+ </div>
+ <br>
+  <div style="
+ background-color: ghostwhite;
+ padding: 20px;
+ margin: 20px;
+ border-radius: 20px;
+ box-shadow: 0 9px 7px;">
+    <h2>Riz</h2>
+    <img src="https://i.ibb.co/RT9pmSJt/images-4.jpg" alt="images-4" border="0">
+       <button  onclick="kam()" style="
+   background-color: greenyellow;
+   padding: 15px;
+   margin: 20px;
+   border-radius: 10px;
+   max-height: 7px;
+   max-width: 160px;"><b>Commander</b></button>
+   <p id="S4">0</p>
+  </div>
+  <br>
+   <div style="
+ background-color: ghostwhite;
+ padding: 20px;
+ margin: 20px;
+ border-radius: 20px;
+ box-shadow: 0 9px 7px;">
+   <h2>Manioc</h2>
+   <img src="https://i.ibb.co/35fzRjwQ/images-5.jpg" alt="images-5" border="0">
+   <button  onclick="verre()" style="
+   background-color: greenyellow;
+   padding: 15px;
+   margin: 20px;
+   border-radius: 10px;
+   max-height: 7px;
+   max-width: 160px;"><b>Commander</b></button>
+   <p id="S3">0</p>
+ </div>
+ <br>
+    <div style="
+ background-color: ghostwhite;
+ padding: 20px;
+ margin: 20px;
+ border-radius: 20px;
+ box-shadow: 0 9px 7px;">
+   <h2>Haricots</h2>
+   <img src="https://i.ibb.co/F4G3XPQ2/images-6.jpg" alt="images-6" border="0">
+   <button  onclick="tester()" style="
+   background-color: greenyellow;
+   padding: 15px;
+   margin: 20px;
+   border-radius: 10px;
+   max-height: 7px;
+   max-width: 160px;"><b>Commander</b></button>
+   <p id="S2">0</p>
+ </div>
+  <br>
+    <div style="
+ background-color: ghostwhite;
+ padding: 20px;
+ margin: 20px;
+ border-radius: 20px;
+ box-shadow: 0 9px 7px;">
+   <h2>Plantin</h2>
+   <img src="https://i.ibb.co/PZDPwmsC/images-7.jpg" alt="images-7" border="0">
+   <button  onclick="commander()" style="
+   background-color: greenyellow;
+   padding: 15px;
+   margin: 20px;
+   border-radius: 10px;
+   max-height: 7px;
+   max-width: 160px;"><b>Commander</b></button>
+   <p id="S1">0</p>
+ </div>
+ <a href="Hervé.html">
+   <button onclick="ff()"  style="
+   background-color: blue;
+   padding: 15px;
+   margin: 20px;
+   border-radius: 10px;
+   max-height: 80px;
+   max-width: 160px;"><b>Voir la liste des produits commandés</b></button>
+   </a>
+<script>
+ let nombre = 0
+ function commander() {
+   nombre = nombre+1
+   document.getElementById("S1").innerText = nombre
+ }
+ let score = 0
+function tester() {
+  score = score+1
+  document.getElementById("S2").innerText = score
+}
+let paul = 0
+function verre() {
+  paul = paul+1
+  document.getElementById("S3").innerText = paul
+}
+let senghor = 0
+function kam() {
+  senghor = senghor+1
+  document.getElementById("S4").innerText = senghor
+}
+let paulin = 0
+function mul() {
+  paulin = paulin+1
+  document.getElementById("S5").innerText = paulin
+}
+function ff() {
+  alert("Merci pour cette commande 😁😁")
+}
+</script>
+</body>
+
+</html>
